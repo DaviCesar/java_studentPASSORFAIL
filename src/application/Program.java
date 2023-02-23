@@ -11,6 +11,8 @@ public class Program {
         Locale.setDefault(Locale.US);
 
 
+
+        System.out.println("=====STUDENT_PASS_OR_FAIL=====");
         Student student = new Student();
         System.out.print("Nome: ");
         student.name = sc.nextLine();
