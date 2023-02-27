@@ -13,19 +13,19 @@ public class Program {
 
 
         System.out.println("=====STUDENT_PASS_OR_FAIL=====");
-        Student student = new Student();
         System.out.print("Nome: ");
-        student.name = sc.nextLine();
+        String name = sc.nextLine();
         System.out.print("1* Nota: ");
-        student.nota1 = sc.nextDouble();
+        double nota1 = sc.nextDouble();
         System.out.print("2* Nota: ");
-        student.nota2 = sc.nextDouble();
+        double nota2 = sc.nextDouble();
         System.out.print("3* Nota: ");
-        student.nota3 = sc.nextDouble();
+        double nota3 = sc.nextDouble();
+        Student student = new Student(name, nota1, nota2, nota3);
 
         System.out.printf("%nFINAL GRADE = %.2f%n", student.somaTotal());
 
-        if ( student.somaTotal() < 60 ){
+        if (student.somaTotal() < 60 ){
             System.out.println("FAILED!");
             System.out.printf("MISSING %.2f POINTS%n", student.missingPoints());
         }else {
